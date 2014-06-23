@@ -52,6 +52,12 @@
         <upstream.version>2.2.4</upstream.version>
         <upstream.url>https://raw2.github.com/needim/noty/v${upstream.version}/js/noty/packaged</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
+        <requirejs>
+            {
+                "paths": { "noty": "jquery.noty.packaged" },
+                "shim": { "noty": [ "jquery" ] }
+            }
+        </requirejs>
     </properties>
     
     <build>
